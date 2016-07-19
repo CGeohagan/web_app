@@ -1,0 +1,104 @@
+/* Typography -------------------- */
+
+* {
+	font-family: $stack-sans-serif;
+}
+
+h1 {
+	font-size: 1.4em;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h2, h3 {
+    font-weight: 200;
+    color: $med-grey;
+    text-align: center;
+}
+
+h3 {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.user_name {
+	font-weight: 100;
+	font-size: .9em;
+}
+
+#alert_text {
+	color: $white;
+	font-weight: 600;
+}
+
+
+.alert p {
+	color: $white;
+	font-weight: 100;
+}
+
+.traffic_nav li {
+	font-size: 14px;
+}
+
+.highlighted {
+	background-color: $neon-green;
+	border-radius: 20px;
+	color: $white;
+}
+
+p.social_stats {
+	font-size: 2.8em;
+	font-weight: 100;
+	color: $med-grey;
+
+	@include breakpoint(large){
+      font-size: 1.5em;
+  	}
+}
+
+p.social_heading {
+	font-size: 1.2em;
+	font-weight: 500;
+	color: $med-purple;
+}
+
+p.user_info, p.activity_time, .settings_widget label {
+	color: $med-grey;
+}
+
+p.user_info, .settings_widget label {
+	font-size: 15px;
+}
+
+p.activity_time {
+	font-size: 13px;
+}
+
+a.user_email {
+	font-size: 13px;
+	text-decoration: none;
+	color: $royal-purple;
+}
+
+i.fa.fa-angle-right {
+	font-size: 1.9em;
+	color: $royal-purple;
+}
+
+button#send, button#save, button#cancel {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 14px;
+	font-family: $stack-sans-serif;
+}
+
+input, textarea, select {
+	color: $medlight-grey;
+	font-size: 14px;
+	font-weight: 100;
+}

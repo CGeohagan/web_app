@@ -1,0 +1,57 @@
+/* Header Styles -------------------- */
+
+* {
+	box-sizing: border-box;
+}
+
+header {
+	height: 70px;
+	align-items: center;
+	@extend %flex;
+
+}
+
+
+.header_row {
+	@extend %flex;
+	@extend %flex-row;
+	@extend %flex-space;
+	padding: 0px 20px;
+	align-items: center;
+	width: 100%;
+}
+
+.header_right {
+	align-items: center;
+}
+
+#bell_icon {
+	height: 20px;
+	vertical-align: middle;
+}
+
+
+.user_name {
+	padding: .5em;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+.user_avatar {
+	height: 30px;
+	width: 30px;
+	border-radius: 100%;
+	margin-right: 4px;
+}
+
+.user {
+	padding-left: 1em;
+	border-left: 1px solid $dark-purple;
+	@extend %flex-align;
+}
+
+.icon {
+	padding-right: 1em;
+}
+
+

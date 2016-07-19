@@ -1,0 +1,146 @@
+/* Containers -------------------- */
+
+body {
+	margin: 0px;
+}
+
+.flex_column {
+	@extend %flex;
+	@extend %flex-column;
+}
+
+.flex_row {
+	@extend %flex;
+	@extend %flex-row;
+}
+
+
+/* Left Nav -----------------------*/
+
+nav.left_nav {
+	width: 90px;
+	background: $dark-purple;
+}
+
+.nav_menu {
+	padding-top: .5em;
+
+	a {
+		width: 32px;
+		margin: 0 auto;
+		display: block;
+	}
+}
+
+ul.nav_icons {
+	list-style: none;
+	padding: .8em 0;
+	width: 100%;
+	margin: .5em 0;
+}
+
+ul.nav_icons:first-child {
+	border-left: 3px solid $neon-green;
+}
+
+
+/* Main Content -------------------*/
+
+.main_section {
+	width: 100%;
+}
+
+.main_header {
+	@extend %flex-align;
+	@extend %flex-center;
+}
+
+.traffic_container {
+	@extend %flex-space;
+	@extend %flex-align;
+}
+
+.wrapper {
+	width: 95%;
+	margin: 0 auto;
+	@extend %flex-space;
+}
+
+.daily_traffic_widget, .mobile_users_widget, .new_members_widget, .recent_activity_widget, .message_user_widget, .settings_widget {
+	flex: 1;
+}
+
+.daily_traffic_widget, .mobile_users_widget {
+	width: 50%;
+	@include breakpoint(medium){
+      width: 100%;
+    }
+}
+
+.daily_traffic_chart, .traffic_chart, .mobile_users_chart {
+	width: 95%;
+	margin: 0 auto 1em;
+}
+
+.traffic_mobile .wrapper, .members .wrapper, .message_settings .wrapper {
+	@include breakpoint(medium){
+      flex-direction: column;
+      -webkit-flex-direction: column; 
+  }
+}
+
+.social_container {
+	@extend %flex-space;
+}
+
+.new_members_widget, .message_user_widget {
+	padding-right: 2.5%;
+	@include breakpoint(medium){
+      padding-right: 0;
+  }
+}
+
+.recent_activity_widget, .settings_widget, .mobile_users_widget {
+	padding-left: 2.5%;
+	border-left: 1px solid $light-grey;
+	@include breakpoint(medium){
+      padding-left: 0;
+      border-left: none;
+      border-top: 1px solid $light-grey;
+    }
+}
+
+.member_info {
+	padding: 18px 0;
+	border-bottom: 1px solid $light-grey;
+	@extend %flex-space;
+	@extend %flex-align;
+	&:last-child {
+		border-bottom: none;
+		margin-bottom: 7px;
+	}
+}
+
+.member_left {
+	@extend %flex;
+	@extend %flex-row;
+	@extend %flex-align;
+}
+
+.message_settings {
+    margin-bottom: 35px;
+}
+
+.message_user_widget, .settings_widget {
+	padding-bottom: 35px;
+}
+
+
+
+
+
+
+
+
+
+
