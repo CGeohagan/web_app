@@ -15,11 +15,22 @@ body {
 }
 
 
+.main {
+	@include breakpoint(medium){
+      flex-direction: column;
+      -webkit-flex-direction: column; 
+  	}
+}
+
+
 /* Left Nav -----------------------*/
 
 nav.left_nav {
 	width: 90px;
 	background: $dark-purple;
+	@include breakpoint(medium){
+      width: 100%;
+  	}
 }
 
 .nav_menu {
@@ -29,7 +40,16 @@ nav.left_nav {
 		width: 32px;
 		margin: 0 auto;
 		display: block;
+		@include breakpoint(medium){
+      		width: 25px;
+  	    }
 	}
+	@include breakpoint(medium){
+      flex-direction: row;
+      -webkit-flex-direction: row; 
+      padding: 0;
+
+  	}
 }
 
 ul.nav_icons {
@@ -37,10 +57,24 @@ ul.nav_icons {
 	padding: .8em 0;
 	width: 100%;
 	margin: .5em 0;
+	@include breakpoint(medium){
+      padding: 1em .5em;
+      margin: 0 5%;
+  	}
+  	&:hover {
+  	@include breakpoint(medium){
+      border-bottom: 3px solid $white;
+  	}
+
+  	}
 }
 
 ul.nav_icons:first-child {
 	border-left: 3px solid $neon-green;
+	@include breakpoint(medium){
+	  border-left: none;
+      border-bottom: 3px solid $neon-green;
+  	}
 }
 
 
@@ -53,6 +87,10 @@ ul.nav_icons:first-child {
 .main_header {
 	@extend %flex-align;
 	@extend %flex-center;
+	@include breakpoint(medium){
+      flex-direction: column-reverse;
+      -webkit-flex-direction: column-reverse; 
+  	}
 }
 
 .traffic_container {
@@ -64,15 +102,19 @@ ul.nav_icons:first-child {
 	width: 95%;
 	margin: 0 auto;
 	@extend %flex-space;
+	@include breakpoint(large){
+      width: 90%;
+  	}
 }
 
 .daily_traffic_widget, .mobile_users_widget, .new_members_widget, .recent_activity_widget, .message_user_widget, .settings_widget {
 	flex: 1;
+	-webkit-flex: 1;
 }
 
 .daily_traffic_widget, .mobile_users_widget {
 	width: 50%;
-	@include breakpoint(medium){
+	@include breakpoint(large){
       width: 100%;
     }
 }
@@ -83,7 +125,7 @@ ul.nav_icons:first-child {
 }
 
 .traffic_mobile .wrapper, .members .wrapper, .message_settings .wrapper {
-	@include breakpoint(medium){
+	@include breakpoint(large){
       flex-direction: column;
       -webkit-flex-direction: column; 
   }
@@ -91,11 +133,17 @@ ul.nav_icons:first-child {
 
 .social_container {
 	@extend %flex-space;
+	@include breakpoint(medium){
+      flex-direction: column;
+      -webkit-flex-direction: column; 
+      width: 70%;
+      margin: 0 auto;
+  	}
 }
 
 .new_members_widget, .message_user_widget {
 	padding-right: 2.5%;
-	@include breakpoint(medium){
+	@include breakpoint(large){
       padding-right: 0;
   }
 }
@@ -103,7 +151,7 @@ ul.nav_icons:first-child {
 .recent_activity_widget, .settings_widget, .mobile_users_widget {
 	padding-left: 2.5%;
 	border-left: 1px solid $light-grey;
-	@include breakpoint(medium){
+	@include breakpoint(large){
       padding-left: 0;
       border-left: none;
       border-top: 1px solid $light-grey;
@@ -133,6 +181,33 @@ ul.nav_icons:first-child {
 
 .message_user_widget, .settings_widget {
 	padding-bottom: 35px;
+}
+
+.message_user_widget {
+	position: relative;
+}
+
+.submit_alert {
+	position: absolute;
+	left: 25%;
+    top: 30%;
+    width: 50%;
+    height: 40%;
+	background-color: $neon-green;
+	@extend %flex;
+	@extend %flex-column;
+}
+
+.submit_alert i.fa.fa-times {
+	align-self: flex-end;
+	margin: 2px 2px 0 0;
+}
+
+.submit_message {
+	color: white;
+	text-align: center;
+	font-size: 1.2em;
+	margin: auto;
 }
 
 

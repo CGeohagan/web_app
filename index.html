@@ -39,7 +39,7 @@
 				</div>
 			</div>
 		</header>
-		<main role="main" class="flex_row">
+		<main role="main" class="flex_row main">
 		<nav class="left_nav">
 			<li class="nav_menu flex_column">
 				<ul class="nav_icons">
@@ -365,12 +365,18 @@
 					<div class="message_user_widget flex_column">
 						<h3>Message User</h3>
 						<form class="flex_column">
+							<p class="user_error">Please select a user.</p>
 							<label for="user_search"></label>
 							<input type="search" name="searchbox" id="user_search" placeholder="Search for User">
+							<p class="message_error">Please write a message.</p>
 		                	<label for="user_message"></label>
 		                	<textarea id="user_message" placeholder="Message for User"></textarea>
 		                	<button id="send" type="submit" aria-describedby="send_button">Send</button>
 						</form>
+						<div class="submit_alert">
+							<i class="fa fa-times" aria-hidden="true"></i>
+							<p class="submit_message">Thank you for submitting a message!</p>
+						</div>
 					</div>
 					<div class="settings_widget flex_column">
 						<h3>Settings</h3>

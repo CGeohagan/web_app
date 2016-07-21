@@ -8,6 +8,7 @@ header {
 }
 
 .social_widget {
+  @extend %flex;
   flex: 0 1 330px;
   @extend %flex-align;
   border: 1px solid $light-grey;
@@ -16,11 +17,15 @@ header {
   svg {
     height: 35px;
     fill: $white;
-    align-self: center;
+    @extend %flex-align;
+   
   }
 
    @include breakpoint(large){
       flex: 0 1 30%;
+      margin: .5em 0;
+      justify-content: center;
+      -webkit-justify-content: center;
   }
 
 }
@@ -36,10 +41,13 @@ i.fa.fa-circle {
   width: 70px;
   background-color: $med-purple;
   border-radius: 100%;
-  display: flex;
-  justify-content: center;
+  @extend %flex;
+  @extend %flex-center;
   margin: 22px 0 22px 22px;
-  align-self: center;
+  @extend %flex-align;
+  @include breakpoint(large){
+      margin-left: 0;
+  }
 }
 
 
@@ -52,10 +60,19 @@ i.fa.fa-circle {
   padding: 5px 12px;
   margin-left: 1.2em;
   cursor: pointer;
+  @include breakpoint(medium){
+      margin-left: 0;
+  }
 }
 
 .traffic_mobile, .social_stats_widget, .members, .message_settings {
   border-top: 1px solid $light-grey;
+}
+
+h1 {
+  @include breakpoint(medium){
+      padding-bottom: .5em;
+    }
 }
 
 .members {
@@ -78,7 +95,13 @@ h2 {
     margin: 0 auto;
     @include breakpoint(large){
       width: 25%;
-  }
+    }
+    @include breakpoint(medium){
+      width: 100%;
+      padding: 30px 0;
+      border-right: none;
+      border-bottom: 1px solid $light-grey;
+    }
 }
 
 h3 {
@@ -97,6 +120,7 @@ h3 {
 
 #alert_text {
   margin-left: 1em;
+  align-self: center;
 }
 
 
@@ -132,16 +156,22 @@ ul.nav_icons, .traffic_nav li, button, .alert, .social_widget, .member_info, .us
 
 .main_header form {
   width: 85%;
-  display: flex;
-  justify-content: flex-end;
+  @extend %flex;
+  @extend %flex-end;
   border-bottom: 1px solid $light-grey;
   @extend %flex-align;
   height: 64px;
   background: #fbfbfb;
+  @include breakpoint(medium){
+      justify-content: center;
+      -webkit-justify-content: center;
+      border-bottom: none;
+    }
 }
 
 select {
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 input[type="search"], textarea, select {
@@ -149,6 +179,10 @@ input[type="search"], textarea, select {
   border-radius: 4px;
   border: 1px solid $light-grey;
   padding-left: 1em;
+  &:focus {
+    border: 2px solid $neon-green;
+    outline: 0;
+  }
 }
 
 .main_search, .select {
@@ -188,6 +222,11 @@ select#DropDownTimezone {
   }
 }
 
+.user_error, .message_error {
+  font-size: 14px;
+  color: $red;
+}
+
 button#send, button#save, button#cancel {
   height: 50px;
   border-style: none;
@@ -214,7 +253,8 @@ textarea#user_message {
     padding-top: 1em;
 }
 
-/* The switch - the box around the slider */
+
+/* Switch Checkbox Styles */
 .switch {
   position: relative;
   display: inline-block;
