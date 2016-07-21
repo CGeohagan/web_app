@@ -21,13 +21,13 @@ $messageError.hide();
 $('button#send').click(function(){
 	event.preventDefault();
 	// 2. Use JS to display error messages if user isn't selected or message field is empty.
-	if($userSearch.val() == '') {
+	if($userSearch.val() === '') {
 		$userError.show();
 	} 
-	if ($userMessage.val() == '') {
+	if ($userMessage.val() === '') {
 		$messageError.show();
 	}
-	if(!$userSearch.val() == '' && !$userMessage.val() == '') {
+	if($userSearch.val() !== '' && $userMessage.val() !== '') {
 		$submit.show();
 	}
 });

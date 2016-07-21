@@ -107,7 +107,7 @@ i.fa.fa-times {
   border-radius: 100%;
   margin-right: 10px; }
 
-ul.nav_icons:hover, .traffic_nav li:hover, button:hover, .alert:hover, .social_widget:hover, .member_info:hover, .user_name:hover, #bell_icon:hover {
+li.nav_icons:hover, .traffic_nav li:hover, button:hover, .alert:hover, .social_widget:hover, .member_info:hover, .user_name:hover, #bell_icon:hover {
   opacity: .6; }
 
 /* Form Styles */
@@ -377,7 +377,10 @@ nav.left_nav {
       width: 100%; } }
 
 .nav_menu {
-  padding-top: .5em; }
+  padding-top: .5em;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 0; }
   .nav_menu a {
     width: 32px;
     margin: 0 auto;
@@ -391,23 +394,23 @@ nav.left_nav {
       -webkit-flex-direction: row;
       padding: 0; } }
 
-ul.nav_icons {
+li.nav_icons {
   list-style: none;
   padding: .8em 0;
   width: 100%;
   margin: .5em 0; }
   @media (max-width: 768px) {
-    ul.nav_icons {
+    li.nav_icons {
       padding: 1em .5em;
       margin: 0 5%; } }
   @media (max-width: 768px) {
-    ul.nav_icons:hover {
+    li.nav_icons:hover {
       border-bottom: 3px solid #fff; } }
 
-ul.nav_icons:first-child {
+li.nav_icons:first-child {
   border-left: 3px solid #81c98f; }
   @media (max-width: 768px) {
-    ul.nav_icons:first-child {
+    li.nav_icons:first-child {
       border-left: none;
       border-bottom: 3px solid #81c98f; } }
 

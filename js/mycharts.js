@@ -4,7 +4,6 @@ var hourly = document.getElementById('hourly');
 var daily = document.getElementById('daily');
 var weekly = document.getElementById('weekly');
 var monthly = document.getElementById('monthly');
-var highlightedNav = document.querySelector('.highlighted');
 
 var monthlyChart = document.getElementById("monthlyChart");
 var myChart = new Chart(monthlyChart, {
@@ -349,24 +348,3 @@ var myDoughnutChart = new Chart(mobileDonutChart, {
 
 
 
-var data = {
-    labels: [
-        "Red",
-        "Blue",
-        "Yellow"
-    ],
-    datasets: [
-        {
-            data: [300, 50, 100],
-            backgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
-            ],
-            hoverBackgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
-            ]
-        }]
-};

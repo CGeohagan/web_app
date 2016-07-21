@@ -35,6 +35,9 @@ nav.left_nav {
 
 .nav_menu {
 	padding-top: .5em;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
 
 	a {
 		width: 32px;
@@ -52,7 +55,7 @@ nav.left_nav {
   	}
 }
 
-ul.nav_icons {
+li.nav_icons {
 	list-style: none;
 	padding: .8em 0;
 	width: 100%;
@@ -69,7 +72,7 @@ ul.nav_icons {
   	}
 }
 
-ul.nav_icons:first-child {
+li.nav_icons:first-child {
 	border-left: 3px solid $neon-green;
 	@include breakpoint(medium){
 	  border-left: none;
