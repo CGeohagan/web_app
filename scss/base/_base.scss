@@ -55,6 +55,12 @@ i.fa.fa-circle {
   margin-left: 20px;
 }
 
+ul.traffic_nav {
+   @include breakpoint(medium){
+    -webkit-padding-start: 0;
+  }
+}
+
 .traffic_nav li {
   list-style: none;
   padding: 5px 12px;
@@ -155,16 +161,8 @@ li.nav_icons, .traffic_nav li, button, .alert, .social_widget, .member_info, .us
 /* Form Styles */
 
 .main_header form {
-  width: 85%;
-  @extend %flex;
-  @extend %flex-end;
   border-bottom: 1px solid $light-grey;
-  @extend %flex-align;
-  height: 64px;
-  background: #fbfbfb;
   @include breakpoint(medium){
-      justify-content: center;
-      -webkit-justify-content: center;
       border-bottom: none;
     }
 }
@@ -210,10 +208,16 @@ select#DropDownTimezone {
 
 .main_header input[type="search"] {
   width: 350px; 
+  @include breakpoint(medium){
+      width: 150px;
+    }
 }
 
 .main_search {
   margin-right: 2.5%;
+  @include breakpoint(medium){
+      margin-right: 0;
+    }
 }
 
 .message_settings {

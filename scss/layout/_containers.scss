@@ -110,6 +110,18 @@ li.nav_icons:first-child {
   	}
 }
 
+.main_header form {
+  width: 85%;
+  @extend %flex;
+  @extend %flex-end;
+  @extend %flex-align;
+  height: 64px;
+  @include breakpoint(medium){
+      justify-content: center;
+      -webkit-justify-content: center;
+    }
+}
+
 .daily_traffic_widget, .mobile_users_widget, .new_members_widget, .recent_activity_widget, .message_user_widget, .settings_widget {
 	flex: 1;
 	-webkit-flex: 1;

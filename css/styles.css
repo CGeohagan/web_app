@@ -37,6 +37,10 @@ i.fa.fa-circle {
 .social_text {
   margin-left: 20px; }
 
+@media (max-width: 768px) {
+  ul.traffic_nav {
+    -webkit-padding-start: 0; } }
+
 .traffic_nav li {
   list-style: none;
   padding: 5px 12px;
@@ -112,14 +116,9 @@ li.nav_icons:hover, .traffic_nav li:hover, button:hover, .alert:hover, .social_w
 
 /* Form Styles */
 .main_header form {
-  width: 85%;
-  border-bottom: 1px solid #e0e0e0;
-  height: 64px;
-  background: #fbfbfb; }
+  border-bottom: 1px solid #e0e0e0; }
   @media (max-width: 768px) {
     .main_header form {
-      justify-content: center;
-      -webkit-justify-content: center;
       border-bottom: none; } }
 
 select {
@@ -155,9 +154,15 @@ select#DropDownTimezone {
 
 .main_header input[type="search"] {
   width: 350px; }
+  @media (max-width: 768px) {
+    .main_header input[type="search"] {
+      width: 150px; } }
 
 .main_search {
   margin-right: 2.5%; }
+  @media (max-width: 768px) {
+    .main_search {
+      margin-right: 0; } }
 
 .message_settings input, .message_settings textarea, .message_settings select {
   margin-bottom: 20px; }
@@ -284,7 +289,7 @@ input:checked ~ .switch-label:before {
 input:checked ~ .switch-label:after {
   opacity: 1; }
 
-.social_widget, .social_icon, .main_header form, header, .header_row, .flex_column, .flex_row, .member_left, .submit_alert {
+.social_widget, .social_icon, header, .header_row, .flex_column, .flex_row, .main_header form, .member_left, .submit_alert {
   display: flex;
   display: -webkit-flex;
   display: -ms-flexbox; }
@@ -311,7 +316,7 @@ input:checked ~ .switch-label:after {
   -webkit-justify-content: flex-end;
   justify-content: flex-end; }
 
-.social_widget, .social_widget svg, .social_icon, .alert, .main_header form, #switch1, #switch2, .header_row, .header_right, .user, .main_header, .traffic_container, .member_info, .member_left {
+.social_widget, .social_widget svg, .social_icon, .alert, #switch1, #switch2, .header_row, .header_right, .user, .main_header, .traffic_container, .main_header form, .member_info, .member_left {
   -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -430,6 +435,14 @@ li.nav_icons:first-child {
     .wrapper {
       width: 90%; } }
 
+.main_header form {
+  width: 85%;
+  height: 64px; }
+  @media (max-width: 768px) {
+    .main_header form {
+      justify-content: center;
+      -webkit-justify-content: center; } }
+
 .daily_traffic_widget, .mobile_users_widget, .new_members_widget, .recent_activity_widget, .message_user_widget, .settings_widget {
   flex: 1;
   -webkit-flex: 1; }
@@ -506,6 +519,10 @@ li.nav_icons:first-child {
   margin: auto; }
 
 /* Typography -------------------- */
+@media (max-width: 768px) {
+  body {
+    font-size: 85%; } }
+
 * {
   font-family: sans-serif; }
 
@@ -522,7 +539,7 @@ h2, h3 {
   text-align: center; }
 
 h3 {
-  font-size: 14px;
+  font-size: .9em;
   text-transform: uppercase; }
 
 .user_name {
@@ -538,10 +555,10 @@ h3 {
   font-weight: 100; }
 
 .traffic_nav li {
-  font-size: 14px; }
+  font-size: .9em; }
   @media (max-width: 768px) {
     .traffic_nav li {
-      font-size: 12px; } }
+      font-size: .75em; } }
 
 .highlighted {
   background-color: #81c98f;
@@ -565,13 +582,13 @@ p.user_info, p.activity_time, .settings_widget label {
   color: #676666; }
 
 p.user_info, .settings_widget label {
-  font-size: 15px; }
+  font-size: .93em; }
 
 p.activity_time {
-  font-size: 13px; }
+  font-size: .8em; }
 
 a.user_email {
-  font-size: 13px;
+  font-size: .8em;
   text-decoration: none;
   color: #9c9ed0; }
 
@@ -583,12 +600,12 @@ button#send, button#save, button#cancel {
   color: white;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 14px;
+  font-size: .9em;
   font-family: sans-serif; }
 
 input, textarea, select {
   color: #b2b2b2;
-  font-size: 14px;
+  font-size: .9em;
   font-weight: 100; }
 
 /*# sourceMappingURL=styles.css.map */
