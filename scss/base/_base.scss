@@ -152,6 +152,16 @@ i.fa.fa-times {
   margin-right: 10px;
 }
 
+.activity_svg {
+    height: 30px;
+    width: 30px;
+    margin-left: 1em;
+    fill: $med-purple;
+    @include breakpoint(medium){
+      display: none;
+    }
+}
+
 li.nav_icons, .traffic_nav li, button, .alert, .social_widget, .member_info, .user_name, #bell_icon {
   &:hover {
     opacity: .6;

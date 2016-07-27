@@ -111,6 +111,15 @@ i.fa.fa-times {
   border-radius: 100%;
   margin-right: 10px; }
 
+.activity_svg {
+  height: 30px;
+  width: 30px;
+  margin-left: 1em;
+  fill: #7377bf; }
+  @media (max-width: 768px) {
+    .activity_svg {
+      display: none; } }
+
 li.nav_icons:hover, .traffic_nav li:hover, button:hover, .alert:hover, .social_widget:hover, .member_info:hover, .user_name:hover, #bell_icon:hover {
   opacity: .6; }
 
@@ -607,5 +616,10 @@ input, textarea, select {
   color: #b2b2b2;
   font-size: .9em;
   font-weight: 100; }
+
+.footer {
+  color: #b2b2b2;
+  font-size: .8em;
+  margin: 10px auto; }
 
 /*# sourceMappingURL=styles.css.map */

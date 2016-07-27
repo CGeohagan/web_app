@@ -2,6 +2,7 @@
 // Make button disappear when the button is clicked
 $('.alert').click(function(){
 	$('.alert').hide();
+	$('.fa-circle').hide();
 });
 
 //Message User Widget functionality
